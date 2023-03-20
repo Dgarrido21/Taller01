@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Ejercicio7
 {
     internal static class Program
@@ -5,11 +7,11 @@ namespace Ejercicio7
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        /// 
         [STAThread]
+
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
@@ -19,8 +21,13 @@ namespace Ejercicio7
     {
         //Atributos
         private string _fabricante, _modelo;
-        private int _anio, _velocidad, _maniobrabilidad;
+        private int _id, _anio, _velocidad, _maniobrabilidad;
         //Propiedades
+        public int Id
+        {
+            get { return this._id; }
+            set { this._id = value; }
+        }
         public string Fabricante
         {
             get { return  this._fabricante; }
@@ -47,8 +54,9 @@ namespace Ejercicio7
             set { this._maniobrabilidad = value; }
         }
         //Metodo
-        public Vehiculo(string fabricante, string modelo, int anio, int velocidad, int maniobrabilidad)
+        public Vehiculo(int Id, string fabricante, string modelo, int anio, int velocidad, int maniobrabilidad)
         {
+            this._id = Id;
             this._fabricante = fabricante;
             this._modelo = modelo;
             this._anio = anio;

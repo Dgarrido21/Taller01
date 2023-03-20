@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             groupBoxVehiculo = new GroupBox();
+            labelId = new Label();
+            textBoxiD = new TextBox();
+            buttonActualizar = new Button();
+            label2 = new Label();
+            textBoxManiobrabilidad = new TextBox();
+            labelVelocidad = new Label();
+            textBoxVelocidad = new TextBox();
+            labelAnio = new Label();
+            textBoxAnio = new TextBox();
             textBoxModelo = new TextBox();
             labelModelo = new Label();
             textBoxFabricante = new TextBox();
             labelFabricante = new Label();
             dataGridView1 = new DataGridView();
-            textBoxAnio = new TextBox();
-            labelAnio = new Label();
-            labelVelocidad = new Label();
-            textBoxVelocidad = new TextBox();
-            label2 = new Label();
-            textBoxManiobrabilidad = new TextBox();
-            buttonGuardar = new Button();
-            buttonEliminar = new Button();
             groupBoxVehiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBoxVehiculo
             // 
-            groupBoxVehiculo.Controls.Add(buttonEliminar);
-            groupBoxVehiculo.Controls.Add(buttonGuardar);
+            groupBoxVehiculo.Controls.Add(labelId);
+            groupBoxVehiculo.Controls.Add(textBoxiD);
+            groupBoxVehiculo.Controls.Add(buttonActualizar);
             groupBoxVehiculo.Controls.Add(label2);
             groupBoxVehiculo.Controls.Add(textBoxManiobrabilidad);
             groupBoxVehiculo.Controls.Add(labelVelocidad);
@@ -68,6 +70,82 @@
             groupBoxVehiculo.TabStop = false;
             groupBoxVehiculo.Text = "Vehiculo";
             groupBoxVehiculo.Enter += groupBoxVehiculo_Enter;
+            // 
+            // labelId
+            // 
+            labelId.AutoSize = true;
+            labelId.Location = new Point(479, 25);
+            labelId.Name = "labelId";
+            labelId.Size = new Size(17, 15);
+            labelId.TabIndex = 16;
+            labelId.Text = "Id";
+            // 
+            // textBoxiD
+            // 
+            textBoxiD.Location = new Point(502, 22);
+            textBoxiD.Name = "textBoxiD";
+            textBoxiD.ReadOnly = true;
+            textBoxiD.Size = new Size(84, 23);
+            textBoxiD.TabIndex = 15;
+            // 
+            // buttonActualizar
+            // 
+            buttonActualizar.Location = new Point(511, 133);
+            buttonActualizar.Name = "buttonActualizar";
+            buttonActualizar.Size = new Size(75, 23);
+            buttonActualizar.TabIndex = 14;
+            buttonActualizar.Text = "Actualizar";
+            buttonActualizar.UseVisualStyleBackColor = true;
+            buttonActualizar.Click += buttonActualizar_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 141);
+            label2.Name = "label2";
+            label2.Size = new Size(94, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Maniobrabilidad";
+            // 
+            // textBoxManiobrabilidad
+            // 
+            textBoxManiobrabilidad.Location = new Point(106, 138);
+            textBoxManiobrabilidad.Name = "textBoxManiobrabilidad";
+            textBoxManiobrabilidad.Size = new Size(68, 23);
+            textBoxManiobrabilidad.TabIndex = 9;
+            textBoxManiobrabilidad.TextChanged += textBoxManiobrabilidad_TextChanged;
+            // 
+            // labelVelocidad
+            // 
+            labelVelocidad.AutoSize = true;
+            labelVelocidad.Location = new Point(42, 112);
+            labelVelocidad.Name = "labelVelocidad";
+            labelVelocidad.Size = new Size(58, 15);
+            labelVelocidad.TabIndex = 8;
+            labelVelocidad.Text = "Velocidad";
+            // 
+            // textBoxVelocidad
+            // 
+            textBoxVelocidad.Location = new Point(106, 109);
+            textBoxVelocidad.Name = "textBoxVelocidad";
+            textBoxVelocidad.Size = new Size(68, 23);
+            textBoxVelocidad.TabIndex = 7;
+            // 
+            // labelAnio
+            // 
+            labelAnio.AutoSize = true;
+            labelAnio.Location = new Point(71, 83);
+            labelAnio.Name = "labelAnio";
+            labelAnio.Size = new Size(29, 15);
+            labelAnio.TabIndex = 6;
+            labelAnio.Text = "Año";
+            // 
+            // textBoxAnio
+            // 
+            textBoxAnio.Location = new Point(106, 80);
+            textBoxAnio.Name = "textBoxAnio";
+            textBoxAnio.Size = new Size(68, 23);
+            textBoxAnio.TabIndex = 5;
             // 
             // textBoxModelo
             // 
@@ -104,80 +182,12 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(9, 183);
+            dataGridView1.Location = new Point(9, 167);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(577, 146);
+            dataGridView1.Size = new Size(577, 164);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // textBoxAnio
-            // 
-            textBoxAnio.Location = new Point(106, 80);
-            textBoxAnio.Name = "textBoxAnio";
-            textBoxAnio.Size = new Size(68, 23);
-            textBoxAnio.TabIndex = 5;
-            // 
-            // labelAnio
-            // 
-            labelAnio.AutoSize = true;
-            labelAnio.Location = new Point(71, 83);
-            labelAnio.Name = "labelAnio";
-            labelAnio.Size = new Size(29, 15);
-            labelAnio.TabIndex = 6;
-            labelAnio.Text = "Año";
-            // 
-            // labelVelocidad
-            // 
-            labelVelocidad.AutoSize = true;
-            labelVelocidad.Location = new Point(42, 112);
-            labelVelocidad.Name = "labelVelocidad";
-            labelVelocidad.Size = new Size(58, 15);
-            labelVelocidad.TabIndex = 8;
-            labelVelocidad.Text = "Velocidad";
-            // 
-            // textBoxVelocidad
-            // 
-            textBoxVelocidad.Location = new Point(106, 109);
-            textBoxVelocidad.Name = "textBoxVelocidad";
-            textBoxVelocidad.Size = new Size(68, 23);
-            textBoxVelocidad.TabIndex = 7;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 141);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 15);
-            label2.TabIndex = 10;
-            label2.Text = "Maniobrabilidad";
-            // 
-            // textBoxManiobrabilidad
-            // 
-            textBoxManiobrabilidad.Location = new Point(106, 138);
-            textBoxManiobrabilidad.Name = "textBoxManiobrabilidad";
-            textBoxManiobrabilidad.Size = new Size(68, 23);
-            textBoxManiobrabilidad.TabIndex = 9;
-            textBoxManiobrabilidad.TextChanged += textBoxManiobrabilidad_TextChanged;
-            // 
-            // buttonGuardar
-            // 
-            buttonGuardar.Location = new Point(430, 154);
-            buttonGuardar.Name = "buttonGuardar";
-            buttonGuardar.Size = new Size(75, 23);
-            buttonGuardar.TabIndex = 12;
-            buttonGuardar.Text = "Guardar";
-            buttonGuardar.UseVisualStyleBackColor = true;
-            buttonGuardar.Click += buttonGuardar_Click;
-            // 
-            // buttonEliminar
-            // 
-            buttonEliminar.Location = new Point(511, 154);
-            buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(75, 23);
-            buttonEliminar.TabIndex = 13;
-            buttonEliminar.Text = "Eliminar";
-            buttonEliminar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -201,13 +211,14 @@
         private TextBox textBoxFabricante;
         private Label labelFabricante;
         private DataGridView dataGridView1;
-        private Button buttonGuardar;
         private Label label2;
         private TextBox textBoxManiobrabilidad;
         private Label labelVelocidad;
         private TextBox textBoxVelocidad;
         private Label labelAnio;
         private TextBox textBoxAnio;
-        private Button buttonEliminar;
+        private Button buttonActualizar;
+        private Label labelId;
+        private TextBox textBoxiD;
     }
 }
